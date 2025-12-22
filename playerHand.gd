@@ -1,6 +1,6 @@
 extends Node2D
 
-const HAND_COUNT = 5
+const HAND_COUNT = 3
 const CARD_SCENE_PATH = "res://scenes/card.tscn"
 const CARD_WIDTH = 200
 const HAND_Y_POSITION = 890

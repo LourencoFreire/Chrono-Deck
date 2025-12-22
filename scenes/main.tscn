@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy0kxo4qwjmkk"]
+[gd_scene load_steps=5 format=3 uid="uid://cy0kxo4qwjmkk"]
 
 [ext_resource type="Texture2D" uid="uid://dxa7milbds7ca" path="res://assets/textures/2302.w062.n005.47B.p1.47.png" id="1_sugp2"]
 [ext_resource type="Script" uid="uid://dh12oswoie4rs" path="res://cardManager.gd" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://vx77l1i1m1hc" path="res://scenes/card.tscn" id="3_jyhfs"]
 [ext_resource type="Script" uid="uid://c44egv1jlxjyg" path="res://playerHand.gd" id="3_tbgi4"]
 
 [node name="Main" type="Control"]
@@ -12,15 +13,19 @@ offset_bottom = 648.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -165.0
-offset_top = -6.0
-offset_right = 2349.0
-offset_bottom = 1080.0
+offset_left = -501.0
+offset_top = -11.0
+offset_right = 1821.0
+offset_bottom = 1025.0
 texture = ExtResource("1_sugp2")
 expand_mode = 3
 
 [node name="cardManager" type="Node2D" parent="."]
 script = ExtResource("2_jyhfs")
+
+[node name="Card" parent="cardManager" instance=ExtResource("3_jyhfs")]
+
+[node name="Card2" parent="cardManager" instance=ExtResource("3_jyhfs")]
 
 [node name="Hand" type="Node2D" parent="."]
 script = ExtResource("3_tbgi4")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://vx77l1i1m1hc"]
 
-[ext_resource type="Script" uid="uid://dw1yb5sv3l8ww" path="res://scenes/card.gd" id="1_6u4wf"]
+[ext_resource type="Script" uid="uid://dw1yb5sv3l8ww" path="res://scripts/card.gd" id="1_6u4wf"]
 [ext_resource type="Texture2D" uid="uid://dl6havuxgbdmf" path="res://assets/textures/_AAD77626-5036-4C59-A56E-7EF23512C09B_-removebg-preview.png" id="1_kikvd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rjlel"]
@@ -17,7 +17,7 @@ position = Vector2(-2, 13)
 shape = SubResource("RectangleShape2D_rjlel")
 
 [node name="cardImg" type="Sprite2D" parent="."]
-position = Vector2(2, 15)
+position = Vector2(-4.7683716e-07, -2.3841858e-07)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_kikvd")
 

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cy0kxo4qwjmkk"]
+[gd_scene load_steps=7 format=3 uid="uid://cy0kxo4qwjmkk"]
 
 [ext_resource type="Texture2D" uid="uid://dxa7milbds7ca" path="res://assets/textures/2302.w062.n005.47B.p1.47.png" id="1_sugp2"]
-[ext_resource type="Script" uid="uid://boprvk1roxmxj" path="res://scenes/worldOne.gd" id="1_tbgi4"]
-[ext_resource type="Script" uid="uid://dh12oswoie4rs" path="res://cardManager.gd" id="2_jyhfs"]
-[ext_resource type="PackedScene" uid="uid://vx77l1i1m1hc" path="res://scenes/card.tscn" id="3_jyhfs"]
-[ext_resource type="Script" uid="uid://c44egv1jlxjyg" path="res://playerHand.gd" id="3_tbgi4"]
+[ext_resource type="Script" uid="uid://boprvk1roxmxj" path="res://scripts/worldOne.gd" id="1_tbgi4"]
+[ext_resource type="Script" uid="uid://dh12oswoie4rs" path="res://scripts/cardManager.gd" id="2_jyhfs"]
+[ext_resource type="Script" uid="uid://c44egv1jlxjyg" path="res://scripts/playerHand.gd" id="3_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://b7com6bidfl48" path="res://scenes/CardSlot.tscn" id="3_tefeu"]
+[ext_resource type="Script" uid="uid://cgk8ha5125c7t" path="res://scripts/cardSlot.gd" id="4_o6xl0"]
 
 [node name="worldOne" type="Control"]
 layout_mode = 3
@@ -22,12 +23,11 @@ offset_bottom = 1025.0
 texture = ExtResource("1_sugp2")
 expand_mode = 3
 
+[node name="cardSlot" parent="." instance=ExtResource("3_tefeu")]
+script = ExtResource("4_o6xl0")
+
 [node name="cardManager" type="Node2D" parent="."]
 script = ExtResource("2_jyhfs")
-
-[node name="Card" parent="cardManager" instance=ExtResource("3_jyhfs")]
-
-[node name="Card2" parent="cardManager" instance=ExtResource("3_jyhfs")]
 
 [node name="Hand" type="Node2D" parent="."]
 script = ExtResource("3_tbgi4")

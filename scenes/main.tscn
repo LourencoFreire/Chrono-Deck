@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cy0kxo4qwjmkk"]
+[gd_scene load_steps=8 format=3 uid="uid://cy0kxo4qwjmkk"]
 
 [ext_resource type="Texture2D" uid="uid://dxa7milbds7ca" path="res://assets/textures/2302.w062.n005.47B.p1.47.png" id="1_sugp2"]
 [ext_resource type="Script" uid="uid://boprvk1roxmxj" path="res://scripts/worldOne.gd" id="1_tbgi4"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://c44egv1jlxjyg" path="res://scripts/playerHand.gd" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b7com6bidfl48" path="res://scenes/CardSlot.tscn" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://cgk8ha5125c7t" path="res://scripts/cardSlot.gd" id="4_o6xl0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tefeu"]
 
 [node name="worldOne" type="Control"]
 layout_mode = 3
@@ -31,3 +33,12 @@ script = ExtResource("2_jyhfs")
 
 [node name="Hand" type="Node2D" parent="."]
 script = ExtResource("3_tbgi4")
+
+[node name="Deck" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Deck"]
+
+[node name="Area2D" type="Area2D" parent="Deck"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/Area2D"]
+shape = SubResource("RectangleShape2D_tefeu")

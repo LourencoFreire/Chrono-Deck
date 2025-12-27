@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cy0kxo4qwjmkk"]
+[gd_scene load_steps=11 format=3 uid="uid://cy0kxo4qwjmkk"]
 
 [ext_resource type="Texture2D" uid="uid://dxa7milbds7ca" path="res://assets/images2/eraOneBg.png" id="1_sugp2"]
 [ext_resource type="Script" uid="uid://boprvk1roxmxj" path="res://scripts/worldOne.gd" id="1_tbgi4"]
@@ -6,6 +6,12 @@
 [ext_resource type="Script" uid="uid://c44egv1jlxjyg" path="res://scripts/playerHand.gd" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://b7com6bidfl48" path="res://scenes/CardSlot.tscn" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://cgk8ha5125c7t" path="res://scripts/cardSlot.gd" id="4_o6xl0"]
+[ext_resource type="Texture2D" uid="uid://cwnqri6l7wwiy" path="res://assets/images2/_8EF5FA7C-6356-4BDA-AB74-23D32B1816DD_-removebg-preview.png" id="7_o6xl0"]
+[ext_resource type="Script" uid="uid://bip7hv0c652mm" path="res://scenes/deck.gd" id="7_tipki"]
+[ext_resource type="Script" uid="uid://bw37wu5hoaijs" path="res://scenes/input_manager.gd" id="9_85g3d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6xl0"]
+size = Vector2(330, 455)
 
 [node name="eraOne" type="Control"]
 layout_mode = 3
@@ -15,6 +21,7 @@ offset_bottom = 648.0
 script = ExtResource("1_tbgi4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+z_index = -2
 layout_mode = 0
 offset_left = -501.0
 offset_top = -11.0
@@ -32,3 +39,32 @@ script = ExtResource("2_jyhfs")
 
 [node name="Hand" type="Node2D" parent="."]
 script = ExtResource("3_tbgi4")
+
+[node name="Deck" type="Node2D" parent="."]
+z_index = -2
+position = Vector2(150, 890)
+scale = Vector2(0.65, 0.65)
+script = ExtResource("7_tipki")
+
+[node name="Sprite2D" type="Sprite2D" parent="Deck"]
+texture = ExtResource("7_o6xl0")
+
+[node name="Area2D" type="Area2D" parent="Deck"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_o6xl0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Deck"]
+modulate = Color(0.9997354, 0.99999994, 0.9001897, 1)
+offset_left = -146.15384
+offset_top = -226.1538
+offset_right = -129.23076
+offset_bottom = -203.07689
+scale = Vector2(3.3, 3.3)
+text = "0"
+
+[node name="inputManager" type="Node2D" parent="."]
+script = ExtResource("9_85g3d")

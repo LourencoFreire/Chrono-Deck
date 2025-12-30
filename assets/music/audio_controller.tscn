@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dajaukxjdpq85"]
 
-[ext_resource type="Script" uid="uid://d017dyy4mi5cd" path="res://assets/music/audio_controller.gd" id="1_gpkkx"]
+[ext_resource type="Script" uid="uid://d017dyy4mi5cd" path="res://scripts/audio_controller.gd" id="1_gpkkx"]
 [ext_resource type="AudioStream" uid="uid://b72tfbhsm7bdi" path="res://assets/music/hidden_temple.wav" id="2_nixjg"]
 
 [node name="AudioController" type="Node2D"]

@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7com6bidfl48"]
+[gd_scene load_steps=4 format=3 uid="uid://b7com6bidfl48"]
 
 [ext_resource type="Texture2D" uid="uid://ea2se50yjh6i" path="res://assets/images2/Ahmun-Khet.png" id="1_us08b"]
+[ext_resource type="PackedScene" uid="uid://driuwh2dmpks0" path="res://scenes/heatlhbar.tscn" id="2_or4gj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_or4gj"]
 size = Vector2(273.333, 481.111)
@@ -22,3 +23,9 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(4.44434, -0.555664)
 shape = SubResource("RectangleShape2D_or4gj")
+
+[node name="Heatlhbar" parent="." instance=ExtResource("2_or4gj")]
+offset_left = 1458.0
+offset_top = 396.0
+offset_right = 1663.0
+offset_bottom = 414.0

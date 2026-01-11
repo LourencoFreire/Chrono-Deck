@@ -24,7 +24,7 @@ collision_mask = 2
 position = Vector2(4.44434, -0.555664)
 shape = SubResource("RectangleShape2D_or4gj")
 
-[node name="Heatlhbar" parent="." instance=ExtResource("2_or4gj")]
+[node name="Healthbar" parent="." instance=ExtResource("2_or4gj")]
 offset_left = 1458.0
 offset_top = 396.0
 offset_right = 1663.0

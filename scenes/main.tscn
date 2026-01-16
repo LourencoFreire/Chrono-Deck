@@ -26,10 +26,10 @@ script = ExtResource("1_tbgi4")
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -2
 layout_mode = 0
-offset_left = -496.0
-offset_top = -27.0
-offset_right = 1925.0
-offset_bottom = 1064.0
+offset_left = -501.0
+offset_top = -11.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 texture = ExtResource("1_sugp2")
 expand_mode = 3
 
@@ -75,10 +75,17 @@ script = ExtResource("9_85g3d")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
-offset_left = 390.0
-offset_top = 42.0
-offset_right = 1375.0
-offset_bottom = 143.0
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.047000002
+offset_left = -492.0
+offset_top = 31.0
+offset_right = 493.0
+offset_bottom = 81.24
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 max_value = 60.0
 value = 60.0
 texture_under = ExtResource("10_trceg")
@@ -95,3 +102,5 @@ offset_bottom = 23.0
 
 [node name="Timer" type="Timer" parent="Countdown"]
 wait_time = 61.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

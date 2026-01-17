@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://3lb71whrhhxt"]
+[gd_scene load_steps=13 format=3 uid="uid://3lb71whrhhxt"]
 
 [ext_resource type="Script" uid="uid://c57sn8fkvddxn" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://hlnj7itrdnjo" path="res://assets/images2/MainScreen.png" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://s8vk632id5e7" path="res://assets/images2/Chrono_Deck_Logo.png" id="2_bqqt6"]
+[ext_resource type="Script" uid="uid://c41uat5rmp2cn" path="res://scenes/audio_control.gd" id="4_8ln24"]
+[ext_resource type="AudioStream" uid="uid://c2qex7wa0hj8s" path="res://assets/music/what is left.wav" id="4_wu84c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
 texture = ExtResource("1_ekxnf")
@@ -36,6 +38,14 @@ shadow_size = 5
 shadow_offset = Vector2(0, 3.67)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oa1go"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_wu84c"]
+color = Color(1, 1, 1, 1)
+thickness = 6
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_8ln24"]
+color = Color(0.45882353, 0.72156864, 0.60784316, 1)
+thickness = 6
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -122,10 +132,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -404.0
-offset_top = -220.25
-offset_right = 404.0
-offset_bottom = 220.25
+offset_left = -435.0
+offset_top = -358.0
+offset_right = 373.0
+offset_bottom = 82.5
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -147,10 +157,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -78.5
-offset_top = -106.25
-offset_right = 78.5
-offset_bottom = -10.0
+offset_left = -117.25
+offset_top = -104.25
+offset_right = 117.25
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 3
@@ -166,7 +176,35 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_oa1go")
 text = "Back
 "
 
+[node name="AudioControl" type="HSlider" parent="Options"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.28100002
+anchor_right = 0.5
+anchor_bottom = 0.3
+offset_left = -255.5
+offset_top = -7.78051
+offset_right = 255.5
+offset_bottom = -0.15000916
+grow_horizontal = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_wu84c")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_8ln24")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_8ln24")
+max_value = 1.0
+step = 0.01
+value = 1.0
+script = ExtResource("4_8ln24")
+audio_bus_name = "Music"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wu84c")
+volume_db = -6.7
+autoplay = true
+bus = &"Music"
+
 [connection signal="pressed" from="MainButtons/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainButtons/Button2" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="MainButtons/Button3" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Options/Back" to="." method="_on_back_options_pressed"]
+[connection signal="value_changed" from="Options/AudioControl" to="Options/AudioControl" method="_on_value_changed"]

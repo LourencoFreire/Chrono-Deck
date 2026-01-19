@@ -8,7 +8,6 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
 texture = ExtResource("1_ekxnf")
-modulate_color = Color(0.47007543, 0.47007596, 0.47007567, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
 bg_color = Color(1, 1, 1, 1)
@@ -132,10 +131,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -435.0
-offset_top = -358.0
-offset_right = 373.0
-offset_bottom = 82.5
+offset_left = -404.0
+offset_top = -220.25
+offset_right = 404.0
+offset_bottom = 220.25
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -178,16 +177,17 @@ text = "Back
 
 [node name="AudioControl" type="HSlider" parent="Options"]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.28100002
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.3
+anchor_bottom = 0.5
 offset_left = -255.5
-offset_top = -7.78051
+offset_top = -8.0
 offset_right = 255.5
-offset_bottom = -0.15000916
+offset_bottom = 8.0
 grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/slider = SubResource("StyleBoxLine_wu84c")
 theme_override_styles/grabber_area = SubResource("StyleBoxLine_8ln24")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_8ln24")

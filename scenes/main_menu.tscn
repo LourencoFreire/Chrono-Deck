@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://c57sn8fkvddxn" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://hlnj7itrdnjo" path="res://assets/images2/MainScreen.png" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://s8vk632id5e7" path="res://assets/images2/Chrono_Deck_Logo.png" id="2_bqqt6"]
-[ext_resource type="Script" uid="uid://c41uat5rmp2cn" path="res://scenes/audio_control.gd" id="4_8ln24"]
+[ext_resource type="Script" uid="uid://c41uat5rmp2cn" path="res://scripts/audio_control.gd" id="4_8ln24"]
 [ext_resource type="AudioStream" uid="uid://c2qex7wa0hj8s" path="res://assets/music/what is left.wav" id="4_wu84c"]
-[ext_resource type="Script" uid="uid://qih5ipjge72o" path="res://scenes/sfx_control.gd" id="5_rtw2f"]
+[ext_resource type="Script" uid="uid://qih5ipjge72o" path="res://scripts/sfx_control.gd" id="5_rtw2f"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
 texture = ExtResource("1_ekxnf")

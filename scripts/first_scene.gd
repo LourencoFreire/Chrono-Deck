@@ -51,16 +51,14 @@ func _on_typing_timer():
 	var segment = text_segments[current_segment]
 	if current_char < segment["text"].length():
 		text_label.text += segment["text"][current_char]
-		
 		if segment["text"][current_char] != " ":
-			typewriter_sfx.pitch_scale = 1.0
-			typewriter_sfx.volume_db = 0 
-			print("Playing: ", segment["text"][current_char], " | Volume: ", typewriter_sfx.volume_db)
+			typewriter_sfx.pitch_scale = randf_range(0.7, 0.8)
 			typewriter_sfx.play()
 		
 		current_char += 1
 	else:
 		typing_timer.stop()
+		typewriter_sfx.stop()
 		if segment["pause_after"] > 0:
 			pause_timer.wait_time = segment["pause_after"]
 			pause_timer.start()

@@ -1,15 +1,14 @@
 extends Control
 
 @onready var text_label = $Text
-@onready var voice = $Voice
+@onready var typewriter_sfx = $typewriter_sfx
 
 var current_segment = 0
 var current_char = 0
-var typing_speed = 0.067
+var typing_speed = 0.1
 var typing_timer: Timer
 var pause_timer: Timer
 var text_segments = [
-	{"text": "", "pause_after": 0.35},
 	{"text": "I used to think time was something you lost slowly,", "pause_after": 1.0},
 	{"text": "Days passing.. Moments slipping away.", "pause_after": 0.5},
 	{"text": "I was wrong.", "pause_after": 1.0},
@@ -52,6 +51,13 @@ func _on_typing_timer():
 	var segment = text_segments[current_segment]
 	if current_char < segment["text"].length():
 		text_label.text += segment["text"][current_char]
+		
+		if segment["text"][current_char] != " ":
+			typewriter_sfx.pitch_scale = 1.0
+			typewriter_sfx.volume_db = 0 
+			print("Playing: ", segment["text"][current_char], " | Volume: ", typewriter_sfx.volume_db)
+			typewriter_sfx.play()
+		
 		current_char += 1
 	else:
 		typing_timer.stop()
@@ -67,6 +73,3 @@ func _on_pause_finished():
 
 func _process(delta: float) -> void:
 	pass
-
-
-#im so pissed of rn, I jsut lost the 43m of work that I did today

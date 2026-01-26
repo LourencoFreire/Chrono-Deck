@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cve2e0lg4myba"
-path="res://.godot/imported/SolarStasis.png-afe35a1416b61f98736697997fa97ffa.ctex"
+uid="uid://cximl3u6xq1ll"
+path="res://.godot/imported/SolarStasis.png-75aef8f1c31035f25471df3ed1975c87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images2/SolarStasis.png"
-dest_files=["res://.godot/imported/SolarStasis.png-afe35a1416b61f98736697997fa97ffa.ctex"]
+source_file="res://assets/card_images/SolarStasis.png"
+dest_files=["res://.godot/imported/SolarStasis.png-75aef8f1c31035f25471df3ed1975c87.ctex"]
 
 [params]
 

@@ -67,5 +67,5 @@ func _on_pause_finished():
 	if current_segment == 7:
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

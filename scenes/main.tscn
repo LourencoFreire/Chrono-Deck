@@ -149,15 +149,6 @@ collision_mask = 4
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_o6xl0")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Deck"]
-modulate = Color(0.999735, 1, 0.90019, 1)
-offset_left = -146.154
-offset_top = -226.154
-offset_right = -129.231
-offset_bottom = -203.077
-scale = Vector2(3.3, 3.3)
-text = "0"
-
 [node name="inputManager" type="Node2D" parent="."]
 script = ExtResource("9_85g3d")
 

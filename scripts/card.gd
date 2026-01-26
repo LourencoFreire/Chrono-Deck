@@ -8,7 +8,7 @@ var starting_position
 func _ready() -> void:
 	get_parent().connect_card_signals(self)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_area_2d_mouse_entered() -> void:

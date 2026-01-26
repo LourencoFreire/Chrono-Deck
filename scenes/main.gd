@@ -6,7 +6,7 @@ func _ready() -> void:
 	options.visible = false
 	options.process_mode = Node.PROCESS_MODE_ALWAYS
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _input(event: InputEvent) -> void:

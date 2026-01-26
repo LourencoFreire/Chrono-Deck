@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cau83pecdn1oy"
-path="res://.godot/imported/Solar Blade.png-68a4ba4b92161c6a442df7eea3de5413.ctex"
+uid="uid://ce568ty4kfocd"
+path="res://.godot/imported/PharaoStrike.png-b2c74c7eaa9af9fc8fa362bf4fc29731.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images2/Solar Blade.png"
-dest_files=["res://.godot/imported/Solar Blade.png-68a4ba4b92161c6a442df7eea3de5413.ctex"]
+source_file="res://assets/card_images/PharaoStrike.png"
+dest_files=["res://.godot/imported/PharaoStrike.png-b2c74c7eaa9af9fc8fa362bf4fc29731.ctex"]
 
 [params]
 

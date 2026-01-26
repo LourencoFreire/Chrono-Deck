@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl6havuxgbdmf"
-path="res://.godot/imported/Pharao's Strike.png-5dfb04b2aa4c741abb99ca96122d0f35.ctex"
+uid="uid://ccb877vcnco1e"
+path="res://.godot/imported/SandShield.png-2bc0931f8cb493f495c338ae9d39b2e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images2/Pharao's Strike.png"
-dest_files=["res://.godot/imported/Pharao's Strike.png-5dfb04b2aa4c741abb99ca96122d0f35.ctex"]
+source_file="res://assets/SandShield.png"
+dest_files=["res://.godot/imported/SandShield.png-2bc0931f8cb493f495c338ae9d39b2e2.ctex"]
 
 [params]
 

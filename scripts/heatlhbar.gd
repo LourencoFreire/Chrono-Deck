@@ -19,7 +19,7 @@ func _set_health(new_health):
 func _ready() -> void:
 	pass
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func init_health(_health):

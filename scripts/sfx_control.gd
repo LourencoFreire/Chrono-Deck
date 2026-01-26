@@ -7,7 +7,7 @@ var audio_bus_id
 func _ready() -> void:
 	audio_bus_id = AudioServer.get_bus_index(audio_bus_name)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_value_changed(value: float) -> void:

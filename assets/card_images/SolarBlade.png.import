@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmeuaj4nwimue"
-path="res://.godot/imported/PraySun.png-58ea5c050d3d600c0ed31d67b67ea712.ctex"
+uid="uid://bck335hxtr54p"
+path="res://.godot/imported/SolarBlade.png-64071286c2bdceb79af2d24374d67259.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images2/PraySun.png"
-dest_files=["res://.godot/imported/PraySun.png-58ea5c050d3d600c0ed31d67b67ea712.ctex"]
+source_file="res://assets/card_images/SolarBlade.png"
+dest_files=["res://.godot/imported/SolarBlade.png-64071286c2bdceb79af2d24374d67259.ctex"]
 
 [params]
 

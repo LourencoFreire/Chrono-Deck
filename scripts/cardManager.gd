@@ -32,6 +32,7 @@ func finish_drag():
 		card_slot_found.card_in_slot = true
 		card_slot_found.current_card = card_being_dragged
 		card_slot_found.take_damage()
+		player_hand_reference.remove_card_from_hand(card_being_dragged)
 	else:
 		player_hand_reference.add_card_to_hand(card_being_dragged)
 	card_being_dragged = null

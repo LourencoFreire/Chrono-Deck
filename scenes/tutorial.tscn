@@ -1,18 +1,22 @@
-[gd_scene load_steps=27 format=3 uid="uid://bnluf0hdvqf3e"]
+[gd_scene load_steps=32 format=3 uid="uid://bnluf0hdvqf3e"]
 
 [ext_resource type="Script" uid="uid://bh6r57qph2vnr" path="res://scripts/Tutorial/mainTutorial.gd" id="1_ej4tf"]
 [ext_resource type="Texture2D" uid="uid://en21l55q56c" path="res://assets/images2/tutorialBg.png" id="2_ej4tf"]
 [ext_resource type="PackedScene" uid="uid://cmsiy2mwp0vgn" path="res://scenes/CardSlotTutorial.tscn" id="3_tbcdj"]
 [ext_resource type="Script" uid="uid://dppnn7bhj616n" path="res://scripts/Tutorial/cardSlotTutorial.gd" id="4_ej4tf"]
-[ext_resource type="Script" uid="uid://dh12oswoie4rs" path="res://scripts/eraOne/cardManager.gd" id="5_vrdqu"]
+[ext_resource type="Script" uid="uid://dw0rte7f1rtm6" path="res://scripts/Tutorial/cardManagerTutorial.gd" id="5_0hilk"]
 [ext_resource type="Script" uid="uid://c44egv1jlxjyg" path="res://scripts/eraOne/playerHand.gd" id="6_cmspm"]
-[ext_resource type="Script" uid="uid://bip7hv0c652mm" path="res://scripts/eraOne/deck.gd" id="7_ikfo1"]
+[ext_resource type="Script" uid="uid://bip7hv0c652mm" path="res://scripts/Tutorial/deckTutorial.gd" id="7_0hilk"]
 [ext_resource type="Texture2D" uid="uid://cwnqri6l7wwiy" path="res://assets/images2/_8EF5FA7C-6356-4BDA-AB74-23D32B1816DD_-removebg-preview.png" id="8_dwom6"]
 [ext_resource type="Script" uid="uid://bw37wu5hoaijs" path="res://scripts/eraOne/input_manager.gd" id="9_bl2xa"]
 [ext_resource type="Texture2D" uid="uid://1f6b24pjwa4d" path="res://assets/images2/Under.png" id="10_15kfc"]
 [ext_resource type="Texture2D" uid="uid://d4i2dkqek2qv3" path="res://assets/images2/Progress.png" id="11_7a100"]
 [ext_resource type="Script" uid="uid://bgyhse4hp6qvj" path="res://scripts/texture_progress_bar.gd" id="12_feaue"]
 [ext_resource type="AudioStream" uid="uid://b72tfbhsm7bdi" path="res://assets/music/hidden_temple.wav" id="13_210s6"]
+[ext_resource type="Texture2D" uid="uid://b6ta14d54arhe" path="res://assets/images2/TutorialLady.png" id="14_0hilk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wr8iv"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o6xl0"]
 size = Vector2(330, 455)
@@ -136,6 +140,91 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 shadow_offset = Vector2(0, 3.67)
 
+[sub_resource type="Animation" id="Animation_0hilk"]
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpeechBox:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-800, 180), Vector2(0, 180)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TutorialLady:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-100, 400), Vector2(670, 400)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("RichTextLabel:visible_characters")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1, -1, 69]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("???:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-260, 473), Vector2(500, 473)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("RichTextLabel:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-780, 200), Vector2(20, 200)]
+}
+
+[sub_resource type="Animation" id="Animation_ej4tf"]
+resource_name = "tutorial_1"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RichTextLabel:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1, 70]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wr8iv"]
+_data = {
+&"RESET": SubResource("Animation_0hilk"),
+&"tutorial_1": SubResource("Animation_ej4tf")
+}
+
 [node name="Tutorial" type="Control"]
 layout_mode = 3
 anchors_preset = 8
@@ -151,6 +240,48 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ej4tf")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0171875
+anchor_top = -0.03888889
+anchor_right = -0.553125
+anchor_bottom = 0.026851851
+offset_left = -747.0
+offset_top = 242.0
+offset_right = 863.9971
+offset_bottom = 348.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = "Hello fellow traveler! To start the tutorial, click the \"next\" button"
+metadata/_edit_use_anchors_ = true
+
+[node name="???" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.22916667
+anchor_top = 0.21388888
+anchor_right = -0.571875
+anchor_bottom = 0.17222223
+offset_left = -700.0
+offset_top = 242.0
+offset_right = 910.9968
+offset_bottom = 348.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = "???
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="SpeechBox" type="Panel" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -800.0
+offset_top = 180.0
+offset_right = -7.0
+offset_bottom = 529.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wr8iv")
+
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -2
 layout_mode = 0
@@ -162,10 +293,11 @@ texture = ExtResource("2_ej4tf")
 expand_mode = 3
 
 [node name="cardSlotTutorial" parent="." instance=ExtResource("3_tbcdj")]
+position = Vector2(-3, 57)
 script = ExtResource("4_ej4tf")
 
 [node name="cardManager" type="Node2D" parent="."]
-script = ExtResource("5_vrdqu")
+script = ExtResource("5_0hilk")
 
 [node name="Hand" type="Node2D" parent="."]
 script = ExtResource("6_cmspm")
@@ -174,7 +306,7 @@ script = ExtResource("6_cmspm")
 z_index = -2
 position = Vector2(150, 890)
 scale = Vector2(0.65, 0.65)
-script = ExtResource("7_ikfo1")
+script = ExtResource("7_0hilk")
 
 [node name="Sprite2D" type="Sprite2D" parent="Deck"]
 texture = ExtResource("8_dwom6")
@@ -331,6 +463,15 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_yc10j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jscy8")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_0ld40")
 text = "End Turn"
+
+[node name="Tutorial1" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_wr8iv")
+}
+
+[node name="TutorialLady" type="Sprite2D" parent="."]
+position = Vector2(-100, 400)
+texture = ExtResource("14_0hilk")
 
 [connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Options/MainMenu" to="." method="_on_main_menu_pressed"]

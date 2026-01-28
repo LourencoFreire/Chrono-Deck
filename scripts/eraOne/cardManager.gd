@@ -19,9 +19,9 @@ func _process(_delta: float) -> void:
 		card_being_dragged.position = Vector2(clamp(mouse_pos.x, 0, screen_size.x), 
 			clamp(mouse_pos.y, 0, screen_size.y))
 
-func start_drag(cardTutorial):
-	card_being_dragged = cardTutorial
-	cardTutorial.scale = Vector2(0.90, 0.90)
+func start_drag(card):
+	card_being_dragged = card
+	card.scale = Vector2(0.90, 0.90)
 
 func finish_drag():
 	card_being_dragged.scale = Vector2(1, 1)
@@ -36,35 +36,35 @@ func finish_drag():
 		player_hand_reference.add_card_to_hand(card_being_dragged)
 	card_being_dragged = null
 
-func connect_card_signals(cardTutorial):
-	cardTutorial.connect("hovered", on_hovered_over_card)
-	cardTutorial.connect("hovered_off", on_hovered_off_card)
+func connect_card_signals(card):
+	card.connect("hovered", on_hovered_over_card)
+	card.connect("hovered_off", on_hovered_off_card)
 
 func on_left_click_released():
 	if card_being_dragged:
 		finish_drag()
 
-func on_hovered_over_card(cardTutorial):
+func on_hovered_over_card(card):
 	if !is_hovering_on_card:
 		is_hovering_on_card = true
-	highlight_card(cardTutorial, true)
+	highlight_card(card, true)
 
-func on_hovered_off_card(cardTutorial):
+func on_hovered_off_card(card):
 	if !card_being_dragged:
-		highlight_card(cardTutorial, false)
+		highlight_card(card, false)
 		var new_card_hovered = raycast_check_card()
 		if new_card_hovered:
 			highlight_card(new_card_hovered, true)
 		else:
 			is_hovering_on_card = false
 
-func highlight_card(cardTutorial, hovered):
+func highlight_card(card, hovered):
 	if hovered:
-		cardTutorial.scale = Vector2(1.05, 1.05)
-		cardTutorial.z_index = 2
+		card.scale = Vector2(1.05, 1.05)
+		card.z_index = 2
 	else:
-		cardTutorial.scale = Vector2(1, 1)
-		cardTutorial.z_index = 1
+		card.scale = Vector2(1, 1)
+		card.z_index = 1
 
 func raycast_check_card_slot():
 	var space_state = get_world_2d().direct_space_state

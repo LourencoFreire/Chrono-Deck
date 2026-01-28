@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmsiy2mwp0vgn"]
+[gd_scene load_steps=5 format=3 uid="uid://cmsiy2mwp0vgn"]
 
 [ext_resource type="Texture2D" uid="uid://c6m1885qdesg" path="res://assets/images2/enemyTutorial.png" id="1_tklwh"]
 [ext_resource type="PackedScene" uid="uid://driuwh2dmpks0" path="res://scenes/heatlhbar.tscn" id="2_0owmm"]
+[ext_resource type="Script" uid="uid://brox0ytlj0vh5" path="res://scripts/Tutorial/heatlhbarTutorial.gd" id="3_0owmm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_or4gj"]
 size = Vector2(273.333, 481.111)
@@ -28,3 +29,4 @@ offset_left = 1452.0
 offset_top = 394.0
 offset_right = 1657.0
 offset_bottom = 412.0
+script = ExtResource("3_0owmm")

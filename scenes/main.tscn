@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b7com6bidfl48" path="res://scenes/CardSlot.tscn" id="3_tefeu"]
 [ext_resource type="Script" uid="uid://cgk8ha5125c7t" path="res://scripts/eraOne/cardSlot.gd" id="4_o6xl0"]
 [ext_resource type="Texture2D" uid="uid://cwnqri6l7wwiy" path="res://assets/images2/_8EF5FA7C-6356-4BDA-AB74-23D32B1816DD_-removebg-preview.png" id="7_o6xl0"]
-[ext_resource type="Script" uid="uid://bip7hv0c652mm" path="res://scripts/eraOne/deck.gd" id="7_tipki"]
+[ext_resource type="Script" uid="uid://ct3ly6w712422" path="res://scripts/eraOne/deck.gd" id="7_trceg"]
 [ext_resource type="Script" uid="uid://bw37wu5hoaijs" path="res://scripts/eraOne/input_manager.gd" id="9_85g3d"]
 [ext_resource type="Script" uid="uid://bgyhse4hp6qvj" path="res://scripts/texture_progress_bar.gd" id="10_choun"]
 [ext_resource type="Texture2D" uid="uid://1f6b24pjwa4d" path="res://assets/images2/Under.png" id="10_trceg"]
@@ -175,7 +175,7 @@ script = ExtResource("3_tbgi4")
 z_index = -2
 position = Vector2(150, 890)
 scale = Vector2(0.65, 0.65)
-script = ExtResource("7_tipki")
+script = ExtResource("7_trceg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Deck"]
 texture = ExtResource("7_o6xl0")

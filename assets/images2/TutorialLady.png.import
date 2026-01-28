@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccb877vcnco1e"
-path="res://.godot/imported/SandShield.png-2bc0931f8cb493f495c338ae9d39b2e2.ctex"
+uid="uid://b6ta14d54arhe"
+path="res://.godot/imported/TutorialLady.png-6bfed643180c74e3719ead27fcaa07a4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/SandShield.png"
-dest_files=["res://.godot/imported/SandShield.png-2bc0931f8cb493f495c338ae9d39b2e2.ctex"]
+source_file="res://assets/images2/TutorialLady.png"
+dest_files=["res://.godot/imported/TutorialLady.png-6bfed643180c74e3719ead27fcaa07a4.ctex"]
 
 [params]
 

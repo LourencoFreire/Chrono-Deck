@@ -35,3 +35,7 @@ func _on_back_options_pressed() -> void:
 	var style = StyleBoxTexture.new()
 	style.texture = load("res://assets/images2/MainScreen.png")
 	background.add_theme_stylebox_override("panel", style)
+
+func _on_tutorial_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/tutorial.tscn")
+	

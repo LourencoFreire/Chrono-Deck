@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbvoiwdwr1kla"
-path="res://.godot/imported/SandShield.png-2ff08426f7edf1cb4b4ae6e61576f121.ctex"
+uid="uid://cg73h3874xct"
+path="res://.godot/imported/PraySun.png-69c372b867e30c8f63c8d346ed819120.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/card_images/SandShield.png"
-dest_files=["res://.godot/imported/SandShield.png-2ff08426f7edf1cb4b4ae6e61576f121.ctex"]
+source_file="res://assets/card_images1/PraySun.png"
+dest_files=["res://.godot/imported/PraySun.png-69c372b867e30c8f63c8d346ed819120.ctex"]
 
 [params]
 

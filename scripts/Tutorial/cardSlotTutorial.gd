@@ -22,42 +22,19 @@ func _ready() -> void:
 	healthbar.init_health(75)
 	deck_reference = $"../Deck"
 
-func place_card(card):
-	current_card = card
+func place_card(cardTutorial):
+	current_card = cardTutorial
 	card_in_slot = true
-	var card_texture = card.get_node("cardImg").texture
+	var card_texture = cardTutorial.get_node("cardImg").texture
 	if card_texture:
 		current_card_image_path = card_texture.resource_path
 
 func take_damage():
 	if card_in_slot:
-		card_per_time()
-		if current_card_image_path == "res://assets/card_images/PharaoStrike.png":
-			healthbar.health -= 15
-			texture_progress_bar.reduce_time(6)
-			delete_card()
-		elif current_card_image_path == "res://assets/card_images/PraySun.png":
-			healthbar.health -= 0
-			texture_progress_bar.add_time(5)
-			delete_card()
-		elif current_card_image_path == "res://assets/card_images/SolarBlade.png":
-			healthbar.health -= 9
-			texture_progress_bar.reduce_time(4)
-			delete_card()
-		elif current_card_image_path == "res://assets/card_images/SandShield.png":
-			card_effect = "SandShield"
-			delete_card()
-		elif current_card_image_path == "res://assets/card_images/SolarStasis.png":
-			card_effect = "SolarStasis"
-			delete_card()
-
-func card_per_time():
-	options.process_mode = Node.PROCESS_MODE_ALWAYS
-	end_turn.process_mode = Node.PROCESS_MODE_ALWAYS
-	texture_progress_bar.process_mode = Node.PROCESS_MODE_ALWAYS
-	timer.process_mode = Node.PROCESS_MODE_ALWAYS
-	ambient_song.process_mode = Node.PROCESS_MODE_ALWAYS
-	get_tree().paused = true
+		deck_reference.process_mode = Node.PROCESS_MODE_DISABLED
+		healthbar.health -= 15
+		texture_progress_bar.reduce_time(6)
+		delete_card()
 
 func delete_card():
 	if current_card:
@@ -67,12 +44,7 @@ func delete_card():
 
 
 func _on_end_turn_pressed() -> void:
-	options.process_mode = Node.PROCESS_MODE_ALWAYS
-	end_turn.process_mode = Node.PROCESS_MODE_ALWAYS
-	texture_progress_bar.process_mode = Node.PROCESS_MODE_ALWAYS
-	timer.process_mode = Node.PROCESS_MODE_ALWAYS
-	ambient_song.process_mode = Node.PROCESS_MODE_ALWAYS
-	get_tree().paused = true
+	deck_reference.process_mode = Node.PROCESS_MODE_INHERIT
 	await get_tree().create_timer(0.67).timeout
 	chronarc_attack = rng.randf_range(4, 13)
 	if card_effect == "SandShield":
@@ -82,5 +54,4 @@ func _on_end_turn_pressed() -> void:
 		chronarc_attack = 0
 		card_effect = ""
 	texture_progress_bar.reduce_time(chronarc_attack)
-	await get_tree().create_timer(0.67).timeout
-	get_tree().paused = false
+	await get_tree().create_timer(0.67, false).timeout

@@ -12,12 +12,11 @@ var card_effect = ""
 @onready var card_manager = $"../cardManager"
 @onready var texture_progress_bar = $"../CanvasLayer/TextureProgressBar"
 @onready var countdownLabel = $"../Countdown/countdownLabel"
-@onready var end_turn: Button = $"../endTurn"
-@onready var timer: Timer = $"../Countdown/Timer"
-@onready var ambient_song: AudioStreamPlayer = $"../AmbientSong"
-@onready var options: Panel = $"../Options"
+@onready var end_turn = $"../endTurn"
+@onready var timer = $"../Countdown/Timer"
+@onready var ambient_song = $"../AmbientSong"
+@onready var options = $"../Options"
 @onready var hand = $"../Hand"
-
 
 func _ready() -> void:
 	healthbar.init_health(75)
@@ -32,7 +31,6 @@ func place_card(card):
 
 func take_damage():
 	if card_in_slot:
-		card_per_time()
 		if current_card_image_path == "res://assets/card_images/PharaoStrike.png":
 			healthbar.health -= 15
 			texture_progress_bar.reduce_time(6)
@@ -52,14 +50,6 @@ func take_damage():
 			card_effect = "SolarStasis"
 			delete_card()
 
-func card_per_time():
-	options.process_mode = Node.PROCESS_MODE_ALWAYS
-	end_turn.process_mode = Node.PROCESS_MODE_ALWAYS
-	texture_progress_bar.process_mode = Node.PROCESS_MODE_ALWAYS
-	timer.process_mode = Node.PROCESS_MODE_ALWAYS
-	ambient_song.process_mode = Node.PROCESS_MODE_ALWAYS
-	get_tree().paused = true
-
 func delete_card():
 	if current_card:
 		current_card.queue_free()
@@ -68,11 +58,7 @@ func delete_card():
 
 
 func _on_end_turn_pressed() -> void:
-	options.process_mode = Node.PROCESS_MODE_ALWAYS
-	end_turn.process_mode = Node.PROCESS_MODE_ALWAYS
-	texture_progress_bar.process_mode = Node.PROCESS_MODE_ALWAYS
-	timer.process_mode = Node.PROCESS_MODE_ALWAYS
-	ambient_song.process_mode = Node.PROCESS_MODE_ALWAYS
+	deck_reference.process_mode = Node.PROCESS_MODE_INHERIT
 	get_tree().paused = true
 	await get_tree().create_timer(0.67).timeout
 	chronarc_attack = rng.randf_range(4, 13)

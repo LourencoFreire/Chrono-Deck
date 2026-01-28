@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce568ty4kfocd"
-path="res://.godot/imported/PharaoStrike.png-b2c74c7eaa9af9fc8fa362bf4fc29731.ctex"
+uid="uid://cximl3u6xq1ll"
+path="res://.godot/imported/SolarStasis.png-7d61522edd222b5fc4fbd710e76f2cb5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/card_images/PharaoStrike.png"
-dest_files=["res://.godot/imported/PharaoStrike.png-b2c74c7eaa9af9fc8fa362bf4fc29731.ctex"]
+source_file="res://assets/card_images1/SolarStasis.png"
+dest_files=["res://.godot/imported/SolarStasis.png-7d61522edd222b5fc4fbd710e76f2cb5.ctex"]
 
 [params]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=27 format=3 uid="uid://bnluf0hdvqf3e"]
 
 [ext_resource type="Script" uid="uid://bh6r57qph2vnr" path="res://scripts/Tutorial/mainTutorial.gd" id="1_ej4tf"]
-[ext_resource type="Texture2D" uid="uid://dxa7milbds7ca" path="res://assets/images2/eraOneBg.png" id="2_0hilk"]
-[ext_resource type="PackedScene" uid="uid://b7com6bidfl48" path="res://scenes/CardSlot.tscn" id="3_wr8iv"]
+[ext_resource type="Texture2D" uid="uid://en21l55q56c" path="res://assets/images2/tutorialBg.png" id="2_ej4tf"]
+[ext_resource type="PackedScene" uid="uid://cmsiy2mwp0vgn" path="res://scenes/CardSlotTutorial.tscn" id="3_tbcdj"]
 [ext_resource type="Script" uid="uid://dppnn7bhj616n" path="res://scripts/Tutorial/cardSlotTutorial.gd" id="4_ej4tf"]
 [ext_resource type="Script" uid="uid://dh12oswoie4rs" path="res://scripts/eraOne/cardManager.gd" id="5_vrdqu"]
 [ext_resource type="Script" uid="uid://c44egv1jlxjyg" path="res://scripts/eraOne/playerHand.gd" id="6_cmspm"]
@@ -154,15 +154,14 @@ script = ExtResource("1_ej4tf")
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -2
 layout_mode = 0
-offset_left = -501.0
+offset_left = -464.0
 offset_top = -11.0
-offset_right = 1920.0
+offset_right = 2263.5
 offset_bottom = 1080.0
-texture = ExtResource("2_0hilk")
+texture = ExtResource("2_ej4tf")
 expand_mode = 3
 
-[node name="cardSlot" parent="." instance=ExtResource("3_wr8iv")]
-position = Vector2(134, 52)
+[node name="cardSlotTutorial" parent="." instance=ExtResource("3_tbcdj")]
 script = ExtResource("4_ej4tf")
 
 [node name="cardManager" type="Node2D" parent="."]
@@ -206,7 +205,8 @@ offset_bottom = 51.0
 grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-max_value = 60.0
+max_value = 120.0
+step = 0.01
 value = 60.0
 texture_under = ExtResource("10_15kfc")
 texture_progress = ExtResource("11_7a100")
@@ -334,4 +334,4 @@ text = "End Turn"
 
 [connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Options/MainMenu" to="." method="_on_main_menu_pressed"]
-[connection signal="pressed" from="endTurn" to="cardSlot" method="_on_end_turn_pressed"]
+[connection signal="pressed" from="endTurn" to="cardSlotTutorial" method="_on_end_turn_pressed"]

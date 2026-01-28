@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cg73h3874xct"
-path="res://.godot/imported/PraySun.png-56894bb654c4716b41fa6ad0f8acca4c.ctex"
+uid="uid://4bk03ri04yf5"
+path="res://.godot/imported/Snake.png-7fdf82d3f51731490f0414e96c2a2852.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/card_images/PraySun.png"
-dest_files=["res://.godot/imported/PraySun.png-56894bb654c4716b41fa6ad0f8acca4c.ctex"]
+source_file="res://assets/images2/Snake.png"
+dest_files=["res://.godot/imported/Snake.png-7fdf82d3f51731490f0414e96c2a2852.ctex"]
 
 [params]
 

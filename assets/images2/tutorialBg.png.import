@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bck335hxtr54p"
-path="res://.godot/imported/SolarBlade.png-64071286c2bdceb79af2d24374d67259.ctex"
+uid="uid://en21l55q56c"
+path="res://.godot/imported/tutorialBg.png-95020f24f63025ab51085035458671cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/card_images/SolarBlade.png"
-dest_files=["res://.godot/imported/SolarBlade.png-64071286c2bdceb79af2d24374d67259.ctex"]
+source_file="res://assets/images2/tutorialBg.png"
+dest_files=["res://.godot/imported/tutorialBg.png-95020f24f63025ab51085035458671cf.ctex"]
 
 [params]
 
